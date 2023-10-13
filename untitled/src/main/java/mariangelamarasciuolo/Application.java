@@ -19,6 +19,8 @@ public class Application {
         System.out.println("-----Ricerca per ISBN-----");
         Archivio.ricercaIsbn("545441");
 
+        System.out.println("-----Ricerca per autore-----");
+        Archivio.ricercaAutore("Peppino Magnarone");
 
         System.out.println("-----Elimina elemento-----");
         Archivio.rimuoviElemento(libro1.getIsbn());

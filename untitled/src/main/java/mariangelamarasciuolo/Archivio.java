@@ -34,5 +34,12 @@ public abstract class Archivio {
         }
     }
 
+    public static void ricercaAutore(String Autore) {
+        remember.values().stream()
+                .filter(ele -> ele instanceof Libro)
+                .map(ele -> (Libro) ele)
+                .filter(ele -> Autore.equals(ele.getAutore()))
+                .forEach(System.out::println);
+    }
 
 }
