@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -54,7 +55,7 @@ public abstract class Archivio {
             dato.append(cat.toString());
         }
         try {
-            FileUtils.writeStringToFile(file, dato.toString(), Charset.defaultCharset());
+            FileUtils.writeStringToFile(file, dato.toString(), StandardCharsets.UTF_8, true);
         } catch (IOException e) {
             System.err.println("Impossibile scrivere il file: " + e.getMessage());
         }
