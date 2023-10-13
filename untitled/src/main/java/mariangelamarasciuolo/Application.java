@@ -13,6 +13,7 @@ public class Application {
         archivio.aggiungiElemento(libro1);
         archivio.aggiungiElemento(riviste1);
 
-
+        archivio.rimuoviElemento(libro1.getIsbn());
+        archivio.rimuoviElemento(riviste1.getIsbn());
     }
 }

@@ -12,4 +12,10 @@ public class Archivio {
         remember.put(cat.getIsbn(), cat);
         System.out.println("Elemento aggiunto Correttamente");
     }
+
+    public void rimuoviElemento(String codiceIsbn) {
+        remember.remove(codiceIsbn);
+        System.out.println("Eliminato correttamente");
+    }
+    
 }
