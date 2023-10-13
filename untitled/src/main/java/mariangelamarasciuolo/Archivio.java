@@ -1,5 +1,10 @@
 package mariangelamarasciuolo;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -40,6 +45,19 @@ public abstract class Archivio {
                 .map(ele -> (Libro) ele)
                 .filter(ele -> Autore.equals(ele.getAutore()))
                 .forEach(System.out::println);
+    }
+
+    public static void salvaFile() {
+        File file = new File("remember/remember.txt");
+        StringBuilder dato = new StringBuilder();
+        for (Catalogo cat : remember.values()) {
+            dato.append(cat.toString());
+        }
+        try {
+            FileUtils.writeStringToFile(file, dato.toString(), Charset.defaultCharset());
+        } catch (IOException e) {
+            System.err.println("Impossibile scrivere il file: " + e.getMessage());
+        }
     }
 
 }
