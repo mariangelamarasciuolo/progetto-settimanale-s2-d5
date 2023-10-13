@@ -16,6 +16,9 @@ public class Application {
         System.out.println("-----Ricerca per anno-----");
         Archivio.ricercaAnnoPubblicazione(2022);
 
+        System.out.println("-----Ricerca per ISBN-----");
+        Archivio.ricercaIsbn("545441");
+
 
         System.out.println("-----Elimina elemento-----");
         Archivio.rimuoviElemento(libro1.getIsbn());

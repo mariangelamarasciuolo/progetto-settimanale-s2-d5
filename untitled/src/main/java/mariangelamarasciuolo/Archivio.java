@@ -24,4 +24,15 @@ public abstract class Archivio {
         List<Catalogo> listaAnno = new ArrayList<>(listaProvvisoria.get(annoPubb));
         System.out.println(listaAnno);
     }
+
+    public static void ricercaIsbn(String codiceIsbn) {
+        Catalogo elemento = remember.get(codiceIsbn);
+        if (elemento != null) {
+            System.out.println(elemento);
+        } else {
+            System.out.println("Nessun elemento trovato con ISBN: " + codiceIsbn);
+        }
+    }
+
+
 }
