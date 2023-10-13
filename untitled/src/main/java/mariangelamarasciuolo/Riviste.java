@@ -16,6 +16,10 @@ public class Riviste extends Catalogo {
     public String toString() {
         return "Riviste{" +
                 "periodicita=" + periodicita +
+                ", isbn='" + isbn + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubb=" + annoPubb +
+                ", numeroPag=" + numeroPag +
                 '}';
     }
 }
